@@ -1,1 +1,36 @@
 /* Styles here */
+
+/* ****************************************************************
+
+**************************************************************** */
+
+/* ****************************************************************
+General page styles
+**************************************************************** */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --hero-colour: #0891b2;
+  --background-colour: #fefefe;
+  --font-colour-black: #202020;
+  --font-colour-grey: #424242;
+  --font-colour-white: #fefefe;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+p,
+span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
