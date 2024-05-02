@@ -1,7 +1,8 @@
 /* ****************************************************************
 Contents:
   General page styles
-  Header - Desktop
+  Header - Desktop/Default
+  Main - Desktop/Default
   Tablet styles
     Header - Tablet
   Mobile styles
@@ -11,6 +12,9 @@ Contents:
 /* ****************************************************************
 
 **************************************************************** */
+/* -------------------------------------------------------------
+
+------------------------------------------------------------- */
 
 /* ****************************************************************
 General page styles
@@ -73,7 +77,7 @@ footer {
 }
 
 /* ****************************************************************
-Header - Desktop
+Header - Desktop/Default
 **************************************************************** */
 header {
   position: relative;
@@ -142,11 +146,71 @@ h1 {
 }
 
 /* ****************************************************************
+Main - Desktop/Default
+**************************************************************** */
+main {
+  margin-top: 2rem;
+}
+
+main > h2 {
+  margin-bottom: 1.5rem;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 2rem 3rem;
+}
+
+.main-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--box-shadow);
+}
+
+.main-card-image > img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.main-card-image > img:hover {
+  filter: brightness(80%);
+}
+
+.main-card-content {
+  /* height: 170px; */
+  padding: 1rem;
+}
+
+.main-card-content > header {
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.main-card-content > header > h3 {
+  flex: 1;
+}
+
+.main-card-content > header img {
+  width: 1.5rem;
+}
+
+.main-card-content > p {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* ****************************************************************
 Tablet styles
 **************************************************************** */
-
-/* Header - Tablet */
 @media (max-width: 990px) {
+  /* -------------------------------------------------------------
+  Header - Tablet
+  ------------------------------------------------------------- */
   h1 {
     top: 35px;
     left: 40vw; /* Change as necessary for the person's name */
@@ -156,9 +220,10 @@ Tablet styles
 /* ****************************************************************
 Mobile styles
 **************************************************************** */
-
-/* Header - Mobile */
 @media (max-width: 500px) {
+  /* -------------------------------------------------------------
+  Header - Mobile
+  ------------------------------------------------------------- */
   h1 {
     top: unset;
     left: calc(10vw + 10px);
