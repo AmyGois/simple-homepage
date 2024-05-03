@@ -3,10 +3,13 @@ Contents:
   General page styles
   Header - Desktop/Default
   Main - Desktop/Default
+  Footer - Desktop/Default
   Tablet styles
     Header - Tablet
+    Footer - Tablet
   Mobile styles
     Header - Mobile
+    Footer - Mobile
 **************************************************************** */
 
 /* ****************************************************************
@@ -42,6 +45,7 @@ h3 {
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 0;
+  color: var(--font-colour-black);
 }
 
 h1 {
@@ -57,6 +61,8 @@ p,
 span {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+  color: var(--font-colour-grey);
+  font-size: 1.2rem;
 }
 
 :root,
@@ -86,7 +92,7 @@ header {
 h1 {
   position: absolute;
   top: 380px;
-  left: 12vw; /* Change as necessary for the person's name */
+  left: 12vw; /* Adjust as necessary for the person's name */
   z-index: 1;
 }
 
@@ -127,7 +133,6 @@ h1 {
 }
 
 .header-text > p {
-  font-size: 1.2rem;
   line-height: 1.6;
 }
 
@@ -150,6 +155,7 @@ Main - Desktop/Default
 **************************************************************** */
 main {
   margin-top: 2rem;
+  margin-bottom: 5rem;
 }
 
 main > h2 {
@@ -181,7 +187,6 @@ main > h2 {
 }
 
 .main-card-content {
-  /* height: 170px; */
   padding: 1rem;
 }
 
@@ -205,6 +210,52 @@ main > h2 {
 }
 
 /* ****************************************************************
+Footer - Desktop/Default
+**************************************************************** */
+footer {
+  background-color: var(--hero-colour);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-contact {
+  flex: 1;
+}
+
+.footer-contact > h2,
+.footer-contact > p,
+.footer-contact-info > span {
+  color: var(--font-colour-white);
+}
+
+.footer-contact > p {
+  margin-bottom: 2rem;
+}
+
+.footer-contact-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.footer-contact-info > img {
+  width: 1.5rem;
+}
+
+.footer-contact-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.footer-contact-icons > img {
+  width: 2.5rem;
+}
+
+/* ****************************************************************
 Tablet styles
 **************************************************************** */
 @media (max-width: 990px) {
@@ -213,7 +264,18 @@ Tablet styles
   ------------------------------------------------------------- */
   h1 {
     top: 35px;
-    left: 40vw; /* Change as necessary for the person's name */
+    left: 40vw; /* Adjust as necessary for the person's name */
+  }
+
+  /* -------------------------------------------------------------
+  Footer - Tablet
+  ------------------------------------------------------------- */
+  footer {
+    align-items: center;
+  }
+
+  .footer-img > img {
+    max-width: 100%;
   }
 }
 
@@ -249,5 +311,37 @@ Mobile styles
 
   .header-icons {
     justify-content: center;
+  }
+
+  /* -------------------------------------------------------------
+  Footer - Mobile
+  ------------------------------------------------------------- */
+  footer {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .footer-contact {
+    padding-left: calc(10vw - 20px); /* Adjust if necessary */
+    padding-right: calc(10vw - 20px);
+  }
+
+  .footer-contact > h2 {
+    text-align: center;
+  }
+
+  .footer-contact-icons {
+    justify-content: center;
+  }
+
+  .footer-img {
+    width: 100%;
+  }
+
+  .footer-img > img {
+    width: 100%;
   }
 }
