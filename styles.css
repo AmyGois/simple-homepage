@@ -1,6 +1,7 @@
 /* ****************************************************************
 Contents:
   General page styles
+    Fonts
   Header - Desktop/Default
   Main - Desktop/Default
   Footer - Desktop/Default
@@ -11,13 +12,6 @@ Contents:
     Header - Mobile
     Footer - Mobile
 **************************************************************** */
-
-/* ****************************************************************
-
-**************************************************************** */
-/* -------------------------------------------------------------
-
-------------------------------------------------------------- */
 
 /* ****************************************************************
 General page styles
@@ -35,6 +29,69 @@ General page styles
   --font-colour-grey: #424242;
   --font-colour-white: #fefefe;
   --box-shadow: 4px 4px 10px rgba(96, 96, 96, 0.5);
+}
+
+/* -------------------------------------------------------------
+Fonts
+------------------------------------------------------------- */
+/* Playfair Display regular */
+@font-face {
+  font-family: "Playfair Display";
+  src: url(./fonts/playfair-display/PlayfairDisplay-Regular-400.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url(./fonts/playfair-display/PlayfairDisplay-Italic-400.ttf);
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Playfair Display bold */
+@font-face {
+  font-family: "Playfair Display";
+  src: url(./fonts/playfair-display/PlayfairDisplay-Bold-700.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url(./fonts/playfair-display/PlayfairDisplay-BoldItalic-700.ttf);
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Roboto light */
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/roboto/Roboto-Light-300.ttf);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/roboto/Roboto-LightItalic-300.ttf);
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Roboto regular */
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/roboto/Roboto-Regular-400.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/roboto/Roboto-Italic-400.ttf);
+  font-weight: 400;
+  font-style: italic;
 }
 
 h1,
@@ -287,9 +344,9 @@ Mobile styles
   Header - Mobile
   ------------------------------------------------------------- */
   h1 {
-    top: unset;
+    top: 110vw;
     left: calc(10vw + 10px);
-    bottom: 35rem;
+    /* bottom: 35rem; */
   }
 
   .header-content {
